@@ -1,0 +1,38 @@
+<h2 class="page-title">Add New Airbnb Listing</h2>
+
+<form class="insert-form" action="/airbnbs" method="POST">
+  <label for="listingId">Listing ID:</label>
+  <input type="text" id="listingId" name="listingId" required />
+
+  <label for="name">Title:</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="hostName">Host Name:</label>
+  <input type="text" id="hostName" name="hostName" />
+
+  <label for="neighbourhood">Neighbourhood:</label>
+  <input type="text" id="neighbourhood" name="neighbourhood" />
+
+  <label for="roomType">Room Type:</label>
+  <input type="text" id="roomType" name="roomType" />
+
+  <label for="price">Price ($):</label>
+  <input type="number" id="price" name="price" required min="0" />
+
+  <label for="minimumNights">Minimum Nights:</label>
+  <input type="number" id="minimumNights" name="minimumNights" />
+
+  <label for="numberOfReviews">Number of Reviews:</label>
+  <input type="number" id="numberOfReviews" name="numberOfReviews" />
+
+  <label for="availability365">Availability 365:</label>
+  <input type="number" id="availability365" name="availability365" />
+
+  <label for="thumbnail">Thumbnail URL:</label>
+  <input type="text" id="thumbnail" name="thumbnail" />
+
+  <label for="images">Images (comma separated URLs):</label>
+  <input type="text" id="images" name="images" />
+
+  <button type="submit" class="add-btn">Add Listing</button>
+</form>

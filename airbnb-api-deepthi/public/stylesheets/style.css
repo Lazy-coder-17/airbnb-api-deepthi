@@ -1,0 +1,288 @@
+body {
+  padding: 50px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #ecb2d4;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 0 0 8px 0;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+header nav {
+  margin-top: 6px;
+}
+
+header nav a {
+  color: #3b0a6b; /* purple link like screenshot */
+  text-decoration: underline;
+  margin: 0 8px;
+  font-weight: 600;
+  background: transparent;
+}
+
+header nav a:hover {
+  opacity: 0.95;
+}
+
+main {
+  min-height: 400px;
+  padding: 20px;
+  background-color: #ecf0f1;
+}
+
+.airbnb-table {
+  border-collapse: collapse;
+  width: 95%;
+  margin: 0 auto 40px auto;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.airbnb-table th,
+.airbnb-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.airbnb-table th {
+  background-color: #ecb2d4;
+  color: white;
+  font-weight: bold;
+}
+
+.airbnb-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.airbnb-table tbody tr:hover {
+  background-color: #f1c0ed;
+}
+
+.thumb {
+  width: 100px;
+  height: 60px;
+  border-radius: 5px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+/* Actions column styling */
+.action-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+a.view-link {
+  color: #2196F3;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #ecf0f1;
+  transition: background 0.2s;
+}
+
+a.view-link:hover {
+  background-color: #d0e4ff;
+}
+
+a.edit-link {
+  color: #4CAF50;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #ecf0f1;
+  transition: background 0.2s;
+}
+
+a.edit-link:hover {
+  background-color: #d4f0d4;
+}
+
+.delete-form {
+  display: inline-block;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 20px 0;
+  background-color: #ecf0f1;
+  padding: 28px 0;
+  font-size: 28px;
+  color: #000;
+}
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Insert / Add Listing form styles */
+.insert-form {
+  max-width: 700px;
+  margin: 24px auto 40px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+}
+
+.insert-form label {
+  grid-column: span 2;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.insert-form input,
+.insert-form textarea,
+.insert-form select {
+  padding: 10px 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.insert-form input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.insert-form .add-btn {
+  grid-column: span 2;
+  justify-self: center;
+  align-self: center;
+  background-color: #ecb2d4;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.insert-form .add-btn:hover {
+  background-color: #f1c0ed;
+}
+
+@media (max-width: 700px) {
+  .insert-form { grid-template-columns: 1fr; }
+  header h1 { font-size: 36px; }
+  h2 { padding: 18px 0; }
+}
+
+/* Search form styling on viewData */
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 18px 0;
+}
+.search-form input[type="text"] {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 320px;
+}
+.search-form .search-btn {
+  background-color: #3b0a6b;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.search-form .clear-link {
+  display: inline-flex;
+  align-items: center;
+  color: #3b0a6b;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+
+@media (max-width: 500px) {
+  .search-form { flex-direction: column; gap: 6px; }
+  .search-form input[type="text"] { width: 100%; }
+}
+
+.edit-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-form label {
+  font-weight: bold;
+}
+
+.edit-form input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.update-btn {
+  background-color: #ecb2d4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.update-btn:hover {
+  background-color: #f1c0ed;
+}
+
+footer {
+  background-color: #f1c0ed;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}

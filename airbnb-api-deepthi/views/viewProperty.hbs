@@ -1,0 +1,38 @@
+<h2 style="text-align:center;">{{property.name}}</h2>
+
+<table style="width: 80%; margin: 20px auto; border-collapse: collapse; font-size:16px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+  <tr style="background-color:#ecb2d4; color:white;">
+    <th style="padding:12px; text-align:left;">ID</th>
+    <td style="padding:12px;">{{property.listingId}}</td>
+  </tr>
+  <tr>
+    <th style="padding:12px; text-align:left;">Host</th>
+    <td style="padding:12px;">{{property.hostName}}</td>
+  </tr>
+  <tr>
+    <th style="padding:12px; text-align:left;">Neighbourhood</th>
+    <td style="padding:12px;">{{property.neighbourhood}}</td>
+  </tr>
+  <tr>
+    <th style="padding:12px; text-align:left;">Room Type</th>
+    <td style="padding:12px;">{{property.roomType}}</td>
+  </tr>
+  <tr>
+    <th style="padding:12px; text-align:left;">Price</th>
+    <td style="padding:12px;">${{property.price}}</td>
+  </tr>
+  <tr>
+    <th style="padding:12px; text-align:left;">Thumbnail</th>
+    <td style="padding:12px;">
+      {{#if property.thumbnail}}
+        <img src="{{property.thumbnail}}" width="200" style="border-radius:5px;">
+      {{else}}
+        N/A
+      {{/if}}
+    </td>
+  </tr>
+</table>
+
+<div style="text-align:center; margin-top:20px;">
+  <a href="/airbnbs" style="padding:8px 16px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:4px;">Back to Listings</a>
+</div>

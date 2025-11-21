@@ -1,0 +1,57 @@
+<h2>All Airbnb Listings</h2>
+
+<!-- Search form: filter by neighbourhood -->
+<form method="GET" action="/airbnbs" class="search-form">
+  <input type="text" name="neighbourhood" placeholder="Search by neighbourhood" value="{{filter}}" />
+  <button type="submit" class="search-btn">Search</button>
+  {{#if filter}}
+    <a href="/airbnbs" class="clear-link">Clear</a>
+  {{/if}}
+</form>
+
+<table class="airbnb-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Host</th>
+      <th>Neighbourhood</th>
+      <th>Room Type</th>
+      <th>Price</th>
+      <th>Thumbnail</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#if properties}}
+      {{#each properties}}
+        <tr>
+          <td>{{this.listingId}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.hostName}}</td>
+          <td>{{this.neighbourhood}}</td>
+          <td>{{this.roomType}}</td>
+          <td>${{this.price}}</td>
+          <td>
+            {{#if this.thumbnail}}
+              <img src="{{this.thumbnail}}" class="thumb" alt="Thumbnail" />
+            {{else}}
+              N/A
+            {{/if}}
+          </td>
+          <td class="action-cell">
+            {{#if this.listingId}}
+              <a href="/airbnbs/{{this.listingId}}" class="view-link">View</a>
+            {{else}}
+              N/A
+            {{/if}}
+          </td>
+        </tr>
+      {{/each}}
+    {{else}}
+      <tr>
+        <td colspan="8" style="text-align:center;">No listings found.</td>
+      </tr>
+    {{/if}}
+  </tbody>
+</table>

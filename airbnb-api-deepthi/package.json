@@ -1,0 +1,20 @@
+{
+  "name": "airbnb-api-deepthi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.4",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.20.0"
+  }
+}
