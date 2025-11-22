@@ -38,3 +38,4 @@ public/uploads/
 
 # Ignore macOS resource forks
 Icon
+.vercel

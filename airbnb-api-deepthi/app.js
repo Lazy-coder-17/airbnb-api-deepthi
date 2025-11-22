@@ -39,5 +39,10 @@ app.use((err, req, res, next) => {
   res.status(500).render("error", { title: "Error", message: "Something went wrong!" });
 });
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+
 // Export the app for serverless deployments (Vercel) and for a local server starter
 module.exports = app;
