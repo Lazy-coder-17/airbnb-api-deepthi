@@ -29,6 +29,15 @@ app.engine(".hbs", engine({
 app.set("view engine", ".hbs");
 app.set("views", path.join(__dirname, "views"));
 
+// Simple homepage route (so visiting / shows something friendly)
+app.get("/", (req, res) => {
+  res.render("home", {
+    title: "Airbnb Lab - Home",
+    welcome: "Welcome to the Airbnb Listings App",
+    description: "Use the links below to view or add listings."
+  });
+});
+
 // Routes
 const airbnbRoutes = require("./routes/airbnbs");
 app.use("/airbnbs", airbnbRoutes);      // HTML view routes
